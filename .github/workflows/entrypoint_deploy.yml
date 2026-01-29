@@ -24,7 +24,7 @@ jobs:
         run: |
           mkdir -p "${{ vars.SERVER_BASE_PATH }}/nginx/conf.d"
 
-          envsubst '${SERVER_NAME} ${PIHOLE_HOST} ${PIHOLE_PORT} ${STORE_HOST} ${STORE_PORT} ${STORE_PATH}' \
+          envsubst '${vars.SERVER_NAME} ${vars.PIHOLE_HOST} ${vars.PIHOLE_PORT} ${vars.STORE_HOST} ${vars.STORE_PORT} ${vars.STORE_PATH}' \
             < infra/nginx/conf.d/default.conf.template \
             > "${{ vars.SERVER_BASE_PATH }}/nginx/conf.d/default.conf"
 
