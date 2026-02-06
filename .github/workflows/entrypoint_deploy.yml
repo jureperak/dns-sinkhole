@@ -26,6 +26,7 @@ jobs:
           NULLROUTE_SERVER_PREFIX:  ${{ vars.NULLROUTE_SERVER_PREFIX }}
           PIHOLE_CONTAINER:  ${{ vars.PIHOLE_CONTAINER }}
           SCRAPPER_CONTAINER:   ${{ vars.SCRAPPER_CONTAINER }}
+          SNACKING_CONTAINER:   ${{ vars.SNACKING_CONTAINER }}
         run: |
           mkdir -p "${{ vars.SERVER_BASE_PATH }}/nginx/conf.d"
       
